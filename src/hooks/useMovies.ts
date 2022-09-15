@@ -10,6 +10,9 @@ interface MoviesState {
 	upcoming: Movie[];
 }
 
+/**
+ * Hook that get Movies information from `themoviedb` and retrieve it
+ */
 export const useMovies = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const [moviesState, setMoviesState] = useState<MoviesState>({
@@ -41,8 +44,8 @@ export const useMovies = () => {
 	};
 
 	useEffect(() => {
-	getMovies();
-}, []);
+		getMovies();
+	}, []);
 
 	return {
 		...moviesState,

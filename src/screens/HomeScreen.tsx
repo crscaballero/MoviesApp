@@ -18,7 +18,7 @@ export const HomeScreen = () => {
 			<View style={{...styles.container, marginTop: top + 20}}>
 				{isLoading
 					? (
-						<ActivityIndicator color="red" size={100} />
+						<ActivityIndicator color="grey" size={100} />
 					) : (
 						<>
 							<View style={styles.containerCarousel}>
@@ -43,14 +43,11 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		// justifyContent: 'center',
-		// alignItems: 'center',
 	},
 	containerCarousel: {
 		height: 440,
 	},
 	containerPopularMovies: {
 		height: 260,
-		backgroundColor: 'red',
 	},
 });
