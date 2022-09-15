@@ -2,17 +2,16 @@ import React from 'react';
 import {View, ActivityIndicator, Dimensions, StyleSheet, ScrollView} from 'react-native';
 import Carousel from '@sergiorj/react-native-snap-carousel';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-// import {useNavigation} from '@react-navigation/core';
 
 import {useMovies} from '../hooks/useMovies';
 import {MoviePoster} from '../components/MoviePoster';
 import { HorizontalSlider } from '../components/HorizontalSlider';
 
+const windowWidth = Dimensions.get('window').width;
+
 export const HomeScreen = () => {
-	// const navigation = useNavigation();
 	const {nowPlaying, popular, topRated, upcoming, isLoading} = useMovies();
 	const {top} = useSafeAreaInsets();
-	const {width: windowWidth} = Dimensions.get('window');
 
   return (
 		<ScrollView>
