@@ -24,16 +24,16 @@ export const HomeScreen = () => {
 						<>
 							<View style={styles.containerCarousel}>
 								<Carousel
-									data={nowPlaying!}
+									data={nowPlaying}
 									renderItem={({item}: any) => <MoviePoster movie={item}/>}
 									sliderWidth={windowWidth}
 									itemWidth={300}
 									inactiveSlideOpacity={0.9}
 								/>
 							</View>
-							<HorizontalSlider title="Most popular" movies={popular!} />
-							<HorizontalSlider title="Top Rated" movies={topRated!} />
-							<HorizontalSlider title="Upcoming" movies={upcoming!} />
+							<HorizontalSlider title="Most popular" movies={popular} />
+							<HorizontalSlider title="Top Rated" movies={topRated} />
+							<HorizontalSlider title="Upcoming" movies={upcoming} />
 						</>
 					)}
 			</View>
