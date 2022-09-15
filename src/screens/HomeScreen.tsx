@@ -10,7 +10,7 @@ import { HorizontalSlider } from '../components/HorizontalSlider';
 
 export const HomeScreen = () => {
 	// const navigation = useNavigation();
-	const {moviesPlaying, isLoading} = useMovies();
+	const {nowPlaying, popular, topRated, upcoming, isLoading} = useMovies();
 	const {top} = useSafeAreaInsets();
 	const {width: windowWidth} = Dimensions.get('window');
 
@@ -24,14 +24,16 @@ export const HomeScreen = () => {
 						<>
 							<View style={styles.containerCarousel}>
 								<Carousel
-									data={moviesPlaying}
+									data={nowPlaying!}
 									renderItem={({item}: any) => <MoviePoster movie={item}/>}
 									sliderWidth={windowWidth}
 									itemWidth={300}
 									inactiveSlideOpacity={0.9}
 								/>
 							</View>
-							<HorizontalSlider title="On billboard" movies={moviesPlaying} />
+							<HorizontalSlider title="Most popular" movies={popular!} />
+							<HorizontalSlider title="Top Rated" movies={topRated!} />
+							<HorizontalSlider title="Upcoming" movies={upcoming!} />
 						</>
 					)}
 			</View>
