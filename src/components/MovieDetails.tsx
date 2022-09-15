@@ -27,12 +27,16 @@ export const MovieDetails = ({movieFull, cast}: Props) => {
 				<Text style={[styles.overviewText, globalStyles.blackText]}>
 					{movieFull.overview}
 				</Text>
-				<Text style={[styles.budgetTitle, globalStyles.blackText]}>
-					Budget
-				</Text>
-				<Text style={[styles.budgetNumber, globalStyles.blackText]}>
-					{Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(movieFull.budget)}
-				</Text>
+				{movieFull.budget > 0 && (
+					<>
+						<Text style={[styles.budgetTitle, globalStyles.blackText]}>
+							Budget
+						</Text>
+						<Text style={[styles.budgetNumber, globalStyles.blackText]}>
+							{Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(movieFull.budget)}
+						</Text>
+					</>
+				)}
 			</View>
 			<View style={{}}>
 				<Text style={[styles.castTitle, globalStyles.blackText]}>
