@@ -2,6 +2,7 @@ import React, {useEffect, useContext} from 'react';
 import {View, ActivityIndicator, Dimensions, StyleSheet, ScrollView} from 'react-native';
 import Carousel from '@sergiorj/react-native-snap-carousel';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import SplashScreen from 'react-native-splash-screen';
 
 import {useMovies} from '../hooks/useMovies';
 import {MoviePoster} from '../components/MoviePoster';
@@ -16,6 +17,10 @@ export const HomeScreen = () => {
 	const {setMainColors} = useContext(GradientContext);
 	const {nowPlaying, popular, topRated, upcoming, isLoading} = useMovies();
 	const {top} = useSafeAreaInsets();
+
+	useEffect(() => {
+		SplashScreen.hide();
+	}, []);
 
 	useEffect(() => {
 		if (nowPlaying.length > 0) {
