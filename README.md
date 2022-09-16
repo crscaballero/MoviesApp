@@ -1,6 +1,6 @@
 # MoviesApp
 
-Small React-Native application connects to the [TheMovieDB](https://www.themoviedb.org/) API to retrieve and show the latest movies information.
+Small React-Native application that connects to [TheMovieDB](https://www.themoviedb.org/) API to retrieve and display the information of the most recent movies in theatres.
 
 ![ezgif-1-2c9425d76b](https://user-images.githubusercontent.com/48134692/190542939-c6c9ed58-0d8d-4805-8a0c-e41efbd4fc0b.gif)
 
