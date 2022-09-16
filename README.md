@@ -2,7 +2,7 @@
 
 Small React-Native application connects to the [TheMovieDB](https://www.themoviedb.org/) API to retrieve and show the latest movies information.
 
-![Screenshot_20220915-184205](https://user-images.githubusercontent.com/48134692/190539533-cabdc570-5c8b-49e6-828a-1e7cfcc40f13.png)
+![ezgif-1-2c9425d76b](https://user-images.githubusercontent.com/48134692/190542939-c6c9ed58-0d8d-4805-8a0c-e41efbd4fc0b.gif)
 
 NOTE: This project doesn't use [expo](https://expo.dev/), it's pure [React-Native](https://reactnative.dev/).
 
